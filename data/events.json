@@ -1,0 +1,116 @@
+{
+  "nextMeeting": {
+    "title": "General Body Meeting — Fall Kickoff",
+    "date": "2026-08-27T18:00:00-04:00",
+    "location": "Weil Hall, Room 270 — Nuclear & Radiological Engineering",
+    "note": "Pizza provided. New members welcome — no nuclear background required."
+  },
+  "upcoming": [
+    {
+      "title": "General Body Meeting — Fall Kickoff",
+      "date": "2026-08-27",
+      "time": "6:00 PM – 7:00 PM",
+      "location": "Weil Hall, Room 270",
+      "tag": "general",
+      "description": "Welcome back! Officer introductions, semester roadmap, and an overview of how to get involved this fall."
+    },
+    {
+      "title": "Plant Tour Info Session: Crystal River & St. Lucie",
+      "date": "2026-09-10",
+      "time": "6:00 PM – 7:30 PM",
+      "location": "Weil Hall, Room 273",
+      "tag": "industry",
+      "description": "Logistics meeting for members signed up for upcoming nuclear plant site visits. Reps from Duke Energy and FPL will join virtually."
+    },
+    {
+      "title": "Welcome Social: Atoms & Snacks",
+      "date": "2026-09-18",
+      "time": "5:30 PM – 7:00 PM",
+      "location": "Reitz Union Colonnade",
+      "tag": "social",
+      "description": "Low-key mixer for prospective members — meet the officer team, grab food, and learn what NAYGN is all about."
+    },
+    {
+      "title": "Industry Talk: Careers in Advanced Reactors",
+      "date": "2026-10-02",
+      "time": "6:00 PM – 7:00 PM",
+      "location": "Weil Hall, Room 270",
+      "tag": "industry",
+      "description": "Guest speakers from NuScale and X-energy on SMRs, microreactors, and what recruiters look for from new grads."
+    },
+    {
+      "title": "Outreach: Nuclear Science Day at Williams Elementary",
+      "date": "2026-10-17",
+      "time": "9:00 AM – 12:00 PM",
+      "location": "Williams Elementary School, Gainesville",
+      "tag": "outreach",
+      "description": "Volunteer to run hands-on radiation and energy demos for K-5 students. Sign up — limited spots."
+    },
+    {
+      "title": "General Body Meeting — Mid-Semester Check-in",
+      "date": "2026-10-29",
+      "time": "6:00 PM – 7:00 PM",
+      "location": "Weil Hall, Room 270",
+      "tag": "general",
+      "description": "Committee updates, officer applications for spring open, and planning for the end-of-semester social."
+    },
+    {
+      "title": "End of Semester Banquet",
+      "date": "2026-11-19",
+      "time": "6:30 PM – 8:30 PM",
+      "location": "TBD",
+      "tag": "social",
+      "description": "Celebrate the semester with the chapter — awards, photos, and good food."
+    }
+  ],
+  "past": [
+    {
+      "title": "General Body Meeting — Spring Wrap-Up",
+      "date": "2026-04-09",
+      "tag": "general",
+      "summary": "Reviewed the spring semester, recognized graduating seniors, and opened officer applications for the 2026–27 academic year.",
+      "notes": [
+        "16 members attended; 4 graduating seniors recognized with chapter pins.",
+        "Officer applications open through 4/30 — Treasurer and Outreach Chair both have open seats.",
+        "Voted to allocate remaining budget toward fall plant tour transportation.",
+        "Reminder: complete the national NAYGN membership renewal over the summer."
+      ]
+    },
+    {
+      "title": "Industry Talk: Women in Nuclear Panel",
+      "date": "2026-03-26",
+      "tag": "industry",
+      "summary": "Panel discussion with three UF alumnae now working at Duke Energy, the NRC, and Westinghouse.",
+      "notes": [
+        "Panelists shared career paths from undergrad to current roles.",
+        "Discussed internship timelines — most utilities recruit 9–12 months ahead of start date.",
+        "Q&A covered relocation, security clearances, and work-life balance.",
+        "Resumes collected and forwarded to panelists for referral consideration."
+      ]
+    },
+    {
+      "title": "Outreach: Energy Fair at Sunshine STEM Festival",
+      "date": "2026-03-07",
+      "tag": "outreach",
+      "summary": "Chapter ran a booth on nuclear fission with a tabletop reactor model for the community STEM festival.",
+      "notes": [
+        "Estimated 200+ kids and families visited the NAYGN booth.",
+        "Cloud chamber demo was the most popular activity again.",
+        "Thanks to the 8 volunteers who worked shifts — outreach hours logged for national NAYGN credit.",
+        "Consider ordering a second cloud chamber kit for next year — line was long."
+      ]
+    },
+    {
+      "title": "General Body Meeting — Spring Kickoff",
+      "date": "2026-01-22",
+      "tag": "general",
+      "summary": "First meeting of the spring semester — set the event calendar and reviewed fall budget.",
+      "notes": [
+        "Reviewed fall semester budget — under by $120, carries over to spring.",
+        "Finalized spring event calendar (see Agenda page).",
+        "New member sign-ups: 11 students added to the GroupMe.",
+        "Discussed potential joint event with UF Society of Women Engineers."
+      ]
+    }
+  ]
+}

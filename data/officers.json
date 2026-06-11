@@ -1,0 +1,58 @@
+{
+  "advisor": {
+    "name": "Dr. A. Faculty Advisor",
+    "role": "Faculty Advisor — Dept. of Nuclear Engineering",
+    "bio": "Provides guidance on chapter programming and connects students with research and industry opportunities across UF's Nuclear & Radiological Engineering program.",
+    "email": "advisor@ufl.edu"
+  },
+  "officers": [
+    {
+      "name": "Jordan Alvarez",
+      "role": "President",
+      "major": "Nuclear Engineering, '27",
+      "bio": "Leads chapter strategy and represents the UF chapter at the national NAYGN conference.",
+      "email": "jalvarez@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Priya Natarajan",
+      "role": "Vice President",
+      "major": "Nuclear Engineering, '27",
+      "bio": "Oversees committee operations and coordinates the speaker series with local industry partners.",
+      "email": "pnatarajan@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Marcus Webb",
+      "role": "Treasurer",
+      "major": "Mechanical Engineering, '28",
+      "bio": "Manages chapter budget, fundraising, and reimbursement for member travel to plant tours.",
+      "email": "mwebb@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Sofia Reyes",
+      "role": "Secretary",
+      "major": "Nuclear Engineering, '28",
+      "bio": "Keeps meeting notes, manages the GroupMe and email list, and maintains this website.",
+      "email": "sreyes@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Daniel Okafor",
+      "role": "Outreach Chair",
+      "major": "Nuclear Engineering, '27",
+      "bio": "Organizes K-12 STEM outreach events and community education demos around Gainesville.",
+      "email": "dokafor@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Emily Chen",
+      "role": "Professional Development Chair",
+      "major": "Materials Science & Engineering, '26",
+      "bio": "Coordinates resume workshops, mock interviews, and industry plant tours.",
+      "email": "echen@ufl.edu",
+      "linkedin": "#"
+    }
+  ]
+}

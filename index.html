@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAYGN at UF — Energizing the Future of Nuclear</title>
+  <meta name="description" content="The University of Florida student chapter of the North American Young Generation in Nuclear (NAYGN) — meeting notes, agenda, and ways to get involved." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="3" fill="#FA4616"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#0021A5" stroke-width="1.4"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#4F9D6E" stroke-width="1.4" transform="rotate(60 20 20)"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#0E1F3C" stroke-width="1.4" transform="rotate(120 20 20)"/>
+        </svg>
+        <span>
+          NAYGN at UF
+          <span class="brand-sub">Univ. of Florida Chapter</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="officers.html">Officers</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a class="nav-cta" href="agenda.html#join">Get Involved</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <span class="kicker">North American Young Generation in Nuclear</span>
+          <h1>Energizing the future of <em>nuclear</em> at UF.</h1>
+          <p class="lede">
+            NAYGN at the University of Florida connects students with the people, projects,
+            and opportunities shaping the next generation of nuclear energy — through
+            professional development, outreach, and a chapter that feels like home.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="agenda.html#join">Get Involved</a>
+            <a class="btn btn-ghost" href="agenda.html">View Agenda</a>
+          </div>
+        </div>
+
+        <div class="atom" aria-hidden="true">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <ellipse class="orbit o1" cx="100" cy="100" rx="90" ry="38"/>
+            <ellipse class="orbit o2" cx="100" cy="100" rx="90" ry="38" transform="rotate(60 100 100)"/>
+            <ellipse class="orbit o3" cx="100" cy="100" rx="90" ry="38" transform="rotate(120 100 100)"/>
+            <circle class="nucleus" cx="100" cy="100" r="10"/>
+            <circle class="electron e1" r="4">
+              <animateMotion dur="14s" repeatCount="indefinite"
+                path="M 10,100 A 90 38 0 1 1 190,100 A 90 38 0 1 1 10,100"/>
+            </circle>
+            <circle class="electron e2" r="4" transform="rotate(60 100 100)">
+              <animateMotion dur="20s" repeatCount="indefinite"
+                path="M 10,100 A 90 38 0 1 1 190,100 A 90 38 0 1 1 10,100"/>
+            </circle>
+            <circle class="electron e3" r="4" transform="rotate(120 100 100)">
+              <animateMotion dur="26s" repeatCount="indefinite"
+                path="M 10,100 A 90 38 0 1 1 190,100 A 90 38 0 1 1 10,100"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ANNOUNCEMENTS ============ -->
+    <section id="updates">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Field Notes</span>
+            <h2>Latest updates</h2>
+          </div>
+          <p class="lede">Notes and announcements from the chapter — new posts land here first.</p>
+        </div>
+
+        <div id="announcement-list" class="card-grid" aria-live="polite">
+          <p class="empty-msg">Loading announcements…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEXT MEETING / COUNTDOWN ============ -->
+    <section id="next-meeting">
+      <div class="container">
+        <div class="countdown-block reveal">
+          <div class="countdown-meta">
+            <span class="kicker">Next meeting</span>
+            <h3 data-field="title">Loading…</h3>
+            <p data-field="when"></p>
+            <div class="meta-row">
+              <span data-field="location"></span>
+            </div>
+            <p style="margin-top:1rem;" data-field="note"></p>
+          </div>
+          <div class="countdown-timer" aria-label="Countdown to next meeting">
+            <div class="unit"><span class="num" data-unit="days">00</span><span class="lbl">Days</span></div>
+            <div class="unit"><span class="num" data-unit="hours">00</span><span class="lbl">Hours</span></div>
+            <div class="unit"><span class="num" data-unit="minutes">00</span><span class="lbl">Min</span></div>
+            <div class="unit"><span class="num" data-unit="seconds">00</span><span class="lbl">Sec</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY NUCLEAR ============ -->
+    <section id="why-nuclear">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Fig. 01 — Why Nuclear</span>
+            <h2>The numbers behind the atom</h2>
+          </div>
+          <p class="lede">A quick look at the role nuclear energy already plays — and why the next generation of engineers matters.</p>
+        </div>
+
+        <div class="stat-grid reveal">
+          <div class="stat">
+            <div class="num"><span data-count="20" data-decimals="0">0</span><span class="unit">%</span></div>
+            <div class="lbl">of U.S. electricity generated by nuclear power</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="50" data-decimals="0">0</span><span class="unit">%</span></div>
+            <div class="lbl">of America's carbon-free electricity comes from nuclear</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="92" data-decimals="0">0</span></div>
+            <div class="lbl">commercial reactors operating across the U.S.</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="100" data-decimals="0">0</span><span class="unit">+</span></div>
+            <div class="lbl">NAYGN chapters energizing young professionals across North America</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED ============ -->
+    <section id="get-involved">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Fig. 02 — Get Involved</span>
+            <h2>Three ways to plug in</h2>
+          </div>
+          <p class="lede">No experience required — just curiosity. Here's how UF students get connected with the chapter.</p>
+        </div>
+
+        <div class="involve-grid reveal">
+          <div class="involve-card is-blue">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" style="color:var(--uf-blue)">
+              <path d="M4 4h16v12H7l-3 3V4z" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M8 9h8M8 12h5" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h3>Join the chat</h3>
+            <p>Get added to our GroupMe and email list for meeting reminders, event invites, and quick announcements.</p>
+            <a class="link-arrow" href="#" target="_blank" rel="noopener">Join GroupMe →</a>
+          </div>
+
+          <div class="involve-card is-orange">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" style="color:var(--uf-orange)">
+              <rect x="3" y="4" width="18" height="17" rx="1" stroke-width="1.5"/>
+              <path d="M3 9h18M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h3>Attend a meeting</h3>
+            <p>Our general body meetings are open to every UF student — no major or experience required. Check the agenda for the next date.</p>
+            <a class="link-arrow" href="agenda.html">View agenda →</a>
+          </div>
+
+          <div class="involve-card is-green">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" style="color:var(--naygn-green)">
+              <path d="M12 3l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L3.3 9.2l6.1-.6L12 3z" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <h3>Step into leadership</h3>
+            <p>Officer positions open every spring. Build real organizational and professional experience while shaping the chapter's direction.</p>
+            <a class="link-arrow" href="officers.html">Meet the officers →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="3" fill="#FA4616"/>
+              <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#FAF8F2" stroke-width="1.4" stroke-opacity="0.6"/>
+              <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#4F9D6E" stroke-width="1.4" transform="rotate(60 20 20)"/>
+              <ellipse cx="20" cy="20" rx="17" ry="7" stroke="#FAF8F2" stroke-width="1.4" stroke-opacity="0.6" transform="rotate(120 20 20)"/>
+            </svg>
+            <span>NAYGN at UF</span>
+          </div>
+          <p>The University of Florida student chapter of the North American Young Generation in Nuclear. Part of UF's Nuclear &amp; Radiological Engineering community.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="officers.html">Officers</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">GroupMe</a></li>
+            <li><a href="https://naygn.org/" target="_blank" rel="noopener">National NAYGN</a></li>
+            <li><a href="https://www.ufl.edu/" target="_blank" rel="noopener">University of Florida</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NAYGN — University of Florida Chapter</span>
+        <span>Built by chapter members, for chapter members</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
