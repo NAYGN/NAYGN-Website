@@ -1034,6 +1034,13 @@ hr.accent {
 .map-embed::after  { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
 .map-embed iframe { width: 100%; height: 480px; border: 0; display: block; }
 
+.map-embed-wide {
+  width: min(96vw, 1600px);
+  margin-inline: auto;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+.map-embed-wide iframe { height: clamp(420px, 75vh, 760px); }
+
 /* Accordion */
 .accordion-item {
   border: 1px solid var(--line);
