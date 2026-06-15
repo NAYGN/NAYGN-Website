@@ -7,51 +7,51 @@
   },
   "officers": [
     {
-      "name": "Jordan Alvarez",
+      "name": "Isabella De Paola",
       "role": "President",
-      "major": "Nuclear Engineering, '27",
+      "major": "",
       "bio": "Leads chapter strategy and represents the UF chapter at the national NAYGN conference.",
-      "email": "jalvarez@ufl.edu",
+      "email": "isabelladepaola@ufl.edu",
       "linkedin": "#"
     },
     {
-      "name": "Priya Natarajan",
+      "name": "Felipe Augusto",
       "role": "Vice President",
-      "major": "Nuclear Engineering, '27",
+      "major": "",
       "bio": "Oversees committee operations and coordinates the speaker series with local industry partners.",
-      "email": "pnatarajan@ufl.edu",
+      "email": "fjanuarionascime@ufl.edu",
       "linkedin": "#"
     },
     {
-      "name": "Marcus Webb",
+      "name": "Mason Fiorello",
       "role": "Treasurer",
-      "major": "Mechanical Engineering, '28",
+      "major": "",
       "bio": "Manages chapter budget, fundraising, and reimbursement for member travel to plant tours.",
-      "email": "mwebb@ufl.edu",
+      "email": "masonfiorello@ufl.edu",
       "linkedin": "#"
     },
     {
-      "name": "Sofia Reyes",
+      "name": "Leah Hopkins",
       "role": "Secretary",
-      "major": "Nuclear Engineering, '28",
+      "major": "",
       "bio": "Keeps meeting notes, manages the GroupMe and email list, and maintains this website.",
-      "email": "sreyes@ufl.edu",
+      "email": "hopkins.leah@ufl.edu",
       "linkedin": "#"
     },
     {
-      "name": "Daniel Okafor",
-      "role": "Outreach Chair",
-      "major": "Nuclear Engineering, '27",
-      "bio": "Organizes K-12 STEM outreach events and community education demos around Gainesville.",
-      "email": "dokafor@ufl.edu",
-      "linkedin": "#"
-    },
-    {
-      "name": "Emily Chen",
+      "name": "Kye Livezey",
       "role": "Professional Development Chair",
-      "major": "Materials Science & Engineering, '26",
+      "major": "",
       "bio": "Coordinates resume workshops, mock interviews, and industry plant tours.",
-      "email": "echen@ufl.edu",
+      "email": "kye.livezey@ufl.edu",
+      "linkedin": "#"
+    },
+    {
+      "name": "Leah Dixel",
+      "role": "Public Information Chair",
+      "major": "",
+      "bio": "Shares chapter updates and helps make nuclear science approachable through community outreach and communications.",
+      "email": "leahdixel@ufl.edu",
       "linkedin": "#"
     }
   ]
