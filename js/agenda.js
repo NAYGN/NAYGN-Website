@@ -12,9 +12,10 @@
   fetch('data/events.json')
     .then((r) => r.json())
     .then((data) => {
-      events = data.upcoming || [];
+      events = (data.upcoming || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
       render();
-      renderPast(data.past || []);
+      const past = (data.past || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+      renderPast(past);
     })
     .catch(() => {
       list.innerHTML = '<p class="empty-msg">Unable to load the agenda right now.</p>';
