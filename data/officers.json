@@ -1,7 +1,7 @@
 {
   "advisor": {
-    "name": "Dr. Ping Neo",
-    "role": "Faculty Advisor — Dept. of Nuclear Engineering",
+    "name": "Ping Neo",
+    "role": "Faculty Advisor — Dept. of Engineering",
     "bio": "Provides guidance on chapter programming and connects students with research and industry opportunities across UF's Nuclear & Radiological Engineering program.",
     "email": "pneo@eng.ufl.edu"
   },
@@ -9,7 +9,7 @@
     {
       "name": "Isabella De Paola",
       "role": "President",
-      "major": "",
+      "major": "Nuclear Engineering, '28",
       "bio": "Leads chapter strategy and represents the UF chapter at the national NAYGN conference.",
       "email": "isabelladepaola@ufl.edu",
       "linkedin": "#"
@@ -17,7 +17,7 @@
     {
       "name": "Felipe Augusto",
       "role": "Vice President",
-      "major": "",
+      "major": "Chemical Engineering, '28",
       "bio": "Oversees committee operations and coordinates the speaker series with local industry partners.",
       "email": "fjanuarionascime@ufl.edu",
       "linkedin": "#"
@@ -25,7 +25,7 @@
     {
       "name": "Mason Fiorello",
       "role": "Treasurer",
-      "major": "",
+      "major": "Nuclear Engineering, '28",
       "bio": "Manages chapter budget, fundraising, and reimbursement for member travel to plant tours.",
       "email": "masonfiorello@ufl.edu",
       "linkedin": "#"
@@ -41,7 +41,7 @@
     {
       "name": "Kye Livezey",
       "role": "Professional Development Chair",
-      "major": "",
+      "major": "Nuclear Engineering, '28",
       "bio": "Coordinates resume workshops, mock interviews, and industry plant tours.",
       "email": "kye.livezey@ufl.edu",
       "linkedin": "#"
@@ -49,7 +49,7 @@
     {
       "name": "Leah Dixel",
       "role": "Public Information Chair",
-      "major": "",
+      "major": "Materials Science and Engineering, '28",
       "bio": "Shares chapter updates and helps make nuclear science approachable through community outreach and communications.",
       "email": "leahdixel@ufl.edu",
       "linkedin": "#"
