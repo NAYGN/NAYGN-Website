@@ -1,18 +1,18 @@
 {
   "nextMeeting": {
-    "title": "General Body Meeting — Fall Kickoff",
-    "date": "2026-08-27T18:00:00-04:00",
-    "location": "Weil Hall, Room 270 — Nuclear & Radiological Engineering",
-    "note": "Pizza provided. New members welcome — no nuclear background required."
+    "title": "General Body Meeting 1: Constellation Energy Speaker",
+    "date": "2026-09-14T18:00:00-04:00",
+    "location": "TBD",
+    "note": "New members welcome — no nuclear background required."
   },
   "upcoming": [
     {
-      "title": "General Body Meeting — Fall Kickoff",
-      "date": "2026-08-27",
-      "time": "6:00 PM – 7:00 PM",
-      "location": "Weil Hall, Room 270",
+      "title": "General Body Meeting 1: Constellation Energy Speaker",
+      "date": "2026-09-14",
+      "time": "TBD",
+      "location": "TBD",
       "tag": "general",
-      "description": "Welcome back! Officer introductions, semester roadmap, and an overview of how to get involved this fall."
+      "description": "Welcome back! Officer introductions, semester roadmap, an overview of how to get involved this fall, and a presentation from Constellation Energy."
     },
     {
       "title": "Plant Tour Info Session: Crystal River & St. Lucie",
@@ -47,20 +47,20 @@
       "description": "Volunteer to run hands-on radiation and energy demos for K-5 students. Sign up — limited spots."
     },
     {
-      "title": "General Body Meeting — Mid-Semester Check-in",
-      "date": "2026-10-29",
-      "time": "6:00 PM – 7:00 PM",
-      "location": "Weil Hall, Room 270",
+      "title": "General Body Meeting 2:",
+      "date": "2026-10-12",
+      "time": "5:30 PM – 6:30 PM",
+      "location": "TBD",
       "tag": "general",
-      "description": "Committee updates, officer applications for spring open, and planning for the end-of-semester social."
+      "description": "TBD"
     },
     {
-      "title": "End of Semester Banquet",
-      "date": "2026-11-19",
-      "time": "6:30 PM – 8:30 PM",
+      "title": "General Body Meeting 3:",
+      "date": "2026-11-09",
+      "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
-      "tag": "social",
-      "description": "Celebrate the semester with the chapter — awards, photos, and good food."
+      "tag": "general",
+      "description": "TBD"
     }
   ],
   "past": [
