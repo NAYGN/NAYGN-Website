@@ -21,7 +21,8 @@
       "major": "Chemical Engineering, '28",
       "bio": "Supports the President, coordinates the officer team, oversees event logistics and accountability, and helps arrange the speaker series with local industry partners.",
       "email": "fjanuarionascime@ufl.edu",
-      "linkedin": "#"
+      "linkedin": "#",
+      "photo": "assets/img/officers/felipe-pinto.jpg"
     },
     {
       "name": "Mason Fiorello",
@@ -37,7 +38,8 @@
       "major": "Mechanical & Aerospace Engineering, '29",
       "bio": "Keeps meeting minutes, rosters, and agendas, manages chapter correspondence and the member email list, and oversees document transitions between terms.",
       "email": "hopkins.leah@ufl.edu",
-      "linkedin": "#"
+      "linkedin": "#",
+      "photo": "assets/img/officers/leah-hopkins.jpg"
     },
     {
       "name": "Kye Livezey",
@@ -45,7 +47,8 @@
       "major": "Nuclear Engineering, '28",
       "bio": "Organizes professional development opportunities including resume workshops, mock interviews, and industry plant tours, while tracking member engagement throughout the year.",
       "email": "kye.livezey@ufl.edu",
-      "linkedin": "#"
+      "linkedin": "#",
+      "photo": "assets/img/officers/kye-livezey.jpg"
     },
     {
       "name": "Leah Dixel",
@@ -53,7 +56,8 @@
       "major": "Materials Science and Engineering, '28",
       "bio": "Runs chapter social media, publicizes events, handles outreach and media documentation, and helps make nuclear science approachable to the broader UF campus community.",
       "email": "leahdixel@ufl.edu",
-      "linkedin": "#"
+      "linkedin": "#",
+      "photo": "assets/img/officers/leah-dixel.jpg"
     }
   ]
 }
