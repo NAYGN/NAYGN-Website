@@ -27,7 +27,7 @@
         <div class="officer-card reveal" tabindex="0" role="button" aria-label="${escapeHtml(o.name)}, ${escapeHtml(o.role)} — tap for bio">
           <div class="card-inner">
             <div class="officer-face front">
-              <div class="officer-photo">${personIcon()}</div>
+              <div class="officer-photo">${o.photo ? `<img src="${escapeHtml(o.photo)}" alt="${escapeHtml(o.name)}" loading="lazy">` : personIcon()}</div>
               <div class="info">
                 <h3>${escapeHtml(o.name)}</h3>
                 <span class="role">${escapeHtml(o.role)}</span>
