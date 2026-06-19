@@ -38,6 +38,7 @@
               <h3>${escapeHtml(o.name)}</h3>
               <p>${escapeHtml(o.bio)}</p>
               <a href="mailto:${escapeHtml(o.email)}">${escapeHtml(o.email)}</a>
+              ${o.linkedin && o.linkedin !== '#' ? `<a href="${escapeHtml(o.linkedin)}" target="_blank" rel="noopener" style="margin-top:0.4rem; display:inline-block;">LinkedIn →</a>` : ''}
             </div>
           </div>
         </div>
