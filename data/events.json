@@ -15,7 +15,7 @@
       "description": "Welcome back! Officer introductions, semester roadmap, an overview of how to get involved this fall, and a presentation from Constellation Energy."
     },
     {
-      "title": "General Body Meeting 2:",
+      "title": "General Body Meeting 2: Oak Ridge Speaker",
       "date": "2026-10-12",
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
@@ -23,7 +23,7 @@
       "description": "TBD"
     },
     {
-      "title": "General Body Meeting 3:",
+      "title": "General Body Meeting 3: Duke Energy Speaker",
       "date": "2026-11-09",
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
@@ -39,6 +39,15 @@
       "summary": "Officer meeting to discuss upcoming events and responsibilities.",
       "notes": [
         "Draft plan for fall semester events."
+      ]
+    },
+    {
+      "title": "Biweekly Officer Meeting",
+      "date": "2026-07-01",
+      "tag": "",
+      "summary": "Officer meeting covered launching a themed speaker series, restructuring governance, and addressing funding gaps.",
+      "notes": [
+        "Pursue funding for fall semester events."
       ]
     }
   ]
