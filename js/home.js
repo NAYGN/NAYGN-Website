@@ -24,7 +24,7 @@
             <article class="note-card reveal">
               <span class="date">${dateStr}</span>
               <h3>${escapeHtml(item.title)}</h3>
-              <p>${escapeHtml(item.body).replace(/\n/g, '<br>')}</p>
+              <p>${item.body.replace(/\n/g, '<br>')}</p>
             </article>
           `;
         })
