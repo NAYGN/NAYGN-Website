@@ -90,6 +90,50 @@
     .committee-join.blue { border-left-color: #0021A5; }
     .committee-join.green { border-left-color: #4F9D6E; }
     .committee-join strong { color: var(--ink); }
+
+    .how-to-join-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .how-to-join-steps li {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #0021A5;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .how-to-join-steps h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.35rem;
+    }
+    .how-to-join-steps p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin: 0;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -248,6 +292,44 @@
         <div class="committee-join green">
           <strong>Want to join the PI Committee?</strong> Show up to a general body meeting and let an officer know — or reach out via Teams.
         </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW TO JOIN ============ -->
+    <section class="committee-section" id="how-to-join" style="background:#fff; border-top:1px solid var(--line);">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">It's simple</span>
+            <h2>How to join</h2>
+          </div>
+        </div>
+        <ol class="how-to-join-steps reveal">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <h4>Join our Teams</h4>
+              <p>Use the link below to join the NAYGN at UF Teams channel — that's where committee announcements and meeting info live.</p>
+              <a class="btn btn-primary" style="margin-top:0.75rem; display:inline-flex;"
+                href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3Agw7eD5TioPblBApmxsUMuFk1ss2CQUdk3cQ-6yIxsLk1%40thread.tacv2%2FGeneral%3FtenantId%3D0d4da0f8-4a31-4d76-ace6-0a62331e1b84%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio&type=channel&deeplinkId=72fbf5be-4fb5-40ed-8a55-b87756ddd74d&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
+                target="_blank" rel="noopener">Join Teams →</a>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <h4>React to the pinned announcement</h4>
+              <p>Find the pinned committee sign-up post in Teams and react with the emoji for the committee you want to join — PD or PI.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <h4>Show up to your committee meeting</h4>
+              <p>Committee meetings are every other week and run about 30 minutes. Come ready to get involved — that's all it takes.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
