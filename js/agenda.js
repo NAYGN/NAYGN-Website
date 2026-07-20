@@ -52,49 +52,47 @@
         const mon = date.toLocaleDateString('en-US', { month: 'short' });
         const tagClass = `tag-${ev.tag}`;
         const tagLabel = TAG_LABELS[ev.tag] || ev.tag;
-        const detailsList = (ev.details || []).length
-          ? `<ul class="event-details-list">${(ev.details).map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
+        const hasDetails = (ev.details || []).length > 0;
+        const detailsList = hasDetails
+          ? `<ul class="event-details-list">${ev.details.map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
           : '';
 
         return `
-          <article class="event-row reveal is-visible">
-            <button class="event-summary" aria-expanded="false">
-              <div class="event-date">
-                <span class="day">${day}</span>
-                <span class="mon">${mon}</span>
-              </div>
-              <div class="event-body">
-                <span class="event-tag ${tagClass}">${escapeHtml(tagLabel)}</span>
-                <h3>${escapeHtml(ev.title)}</h3>
-                <div class="meta">${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</div>
-              </div>
-              <span class="event-chevron" aria-hidden="true"></span>
-            </button>
-            <div class="event-panel">
-              <div class="event-panel-inner">
-                <p>${escapeHtml(ev.description)}</p>
-                ${detailsList}
-                <a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>
-              </div>
+          <article class="event-row reveal is-visible${hasDetails ? ' is-expandable' : ''}">
+            <div class="event-date">
+              <span class="day">${day}</span>
+              <span class="mon">${mon}</span>
+            </div>
+            <div class="event-body">
+              <span class="event-tag ${tagClass}">${escapeHtml(tagLabel)}</span>
+              <h3>${escapeHtml(ev.title)}</h3>
+              <div class="meta">${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</div>
+              <p>${escapeHtml(ev.description)}</p>
+              ${hasDetails ? `
+              <div class="event-panel">
+                <div class="event-panel-inner">${detailsList}</div>
+              </div>` : ''}
+            </div>
+            <div class="event-actions">
+              <a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>
+              ${hasDetails ? '<span class="event-chevron" aria-hidden="true"></span>' : ''}
             </div>
           </article>
         `;
       })
       .join('');
 
-    list.querySelectorAll('.event-summary').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const article = btn.closest('.event-row');
+    list.querySelectorAll('.event-row.is-expandable').forEach((article) => {
+      article.addEventListener('click', (e) => {
+        if (e.target.closest('.cal-link')) return;
         const panel = article.querySelector('.event-panel');
         const isOpen = article.classList.contains('is-open');
         if (isOpen) {
           panel.style.maxHeight = '0';
           article.classList.remove('is-open');
-          btn.setAttribute('aria-expanded', 'false');
         } else {
           panel.style.maxHeight = panel.scrollHeight + 'px';
           article.classList.add('is-open');
-          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
