@@ -52,10 +52,15 @@
         const mon = date.toLocaleDateString('en-US', { month: 'short' });
         const tagClass = `tag-${ev.tag}`;
         const tagLabel = TAG_LABELS[ev.tag] || ev.tag;
-        const hasDetails = (ev.details || []).length > 0;
-        const detailsList = hasDetails
-          ? `<ul class="event-details-list">${ev.details.map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
-          : '';
+        const hasSections = (ev.sections || []).length > 0;
+        const hasDetails = hasSections || (ev.details || []).length > 0;
+        const panelContent = hasSections
+          ? ev.sections.map((sec) => `
+              <div class="event-section">
+                <p class="event-section-heading">${escapeHtml(sec.heading)}</p>
+                <ul class="event-details-list">${sec.items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+              </div>`).join('')
+          : `<ul class="event-details-list">${(ev.details || []).map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`;
 
         return `
           <article class="event-row reveal is-visible${hasDetails ? ' is-expandable' : ''}">
@@ -70,7 +75,7 @@
               <p>${escapeHtml(ev.description)}</p>
               ${hasDetails ? `
               <div class="event-panel">
-                <div class="event-panel-inner">${detailsList}</div>
+                <div class="event-panel-inner">${panelContent}</div>
               </div>` : ''}
             </div>
             <div class="event-actions">

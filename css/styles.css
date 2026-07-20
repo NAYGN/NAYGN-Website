@@ -966,6 +966,16 @@ hr.accent {
   margin-top: 0.75rem;
   border-top: 1px dashed var(--line);
 }
+.event-section { margin-bottom: 0.85rem; }
+.event-section:last-child { margin-bottom: 0; }
+.event-section-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--uf-blue);
+  margin: 0 0 0.35rem 0;
+}
 .event-details-list {
   margin: 0 0 0 1.1rem;
   padding: 0;

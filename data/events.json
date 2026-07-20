@@ -12,13 +12,25 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "Welcome back! Join us for officer introductions, a semester roadmap, and an overview of how to get involved — followed by a presentation from Constellation Energy.",
-      "details": [
-        "Officer introductions and chapter overview",
-        "Fall semester event roadmap",
-        "How to join the PD or PI committee",
-        "Presentation from Constellation Energy speaker",
-        "Q&A with the speaker"
+      "description": "Welcome back! Join us for officer introductions, a semester roadmap, and an overview of how to get involved — followed by a presentation from Constellation Energy on early-career life in clean energy.",
+      "sections": [
+        {
+          "heading": "Theme: Early-Career Professionals",
+          "items": [
+            "Day-to-day life as a new engineer",
+            "What early-career roles look like in the clean energy fleet",
+            "How young professionals grow inside Constellation"
+          ]
+        },
+        {
+          "heading": "Opportunities Spotlight",
+          "items": [
+            "Internship and co-op programs",
+            "Hiring timeline",
+            "What makes a strong applicant",
+            "How UF students can stand out"
+          ]
+        }
       ]
     },
     {
@@ -27,11 +39,26 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "A presentation from a researcher or engineer at Oak Ridge National Laboratory — one of the nation's premier nuclear research facilities.",
-      "details": [
-        "Presentation from Oak Ridge National Laboratory",
-        "Q&A with the speaker",
-        "More details coming soon"
+      "description": "A presentation from a researcher or engineer at Oak Ridge National Laboratory — one of the nation's premier nuclear research facilities — on the frontier of advanced reactor technology.",
+      "sections": [
+        {
+          "heading": "Theme: Advanced Reactors",
+          "items": [
+            "Microreactors",
+            "HALEU (High-Assay Low-Enriched Uranium)",
+            "Test reactors",
+            "National lab R&D"
+          ]
+        },
+        {
+          "heading": "Opportunities Spotlight",
+          "items": [
+            "Oak Ridge internships",
+            "Research fellowships",
+            "How undergrads can get involved in national lab work",
+            "Tips for applying"
+          ]
+        }
       ]
     },
     {
@@ -40,11 +67,26 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "A presentation from Duke Energy, one of the largest electric power companies in the U.S. and a major operator of nuclear generating stations.",
-      "details": [
-        "Presentation from Duke Energy representative",
-        "Q&A with the speaker",
-        "More details coming soon"
+      "description": "A presentation from Duke Energy — one of the largest electric power companies in the U.S. and a major operator of nuclear generating stations — on leadership inside a high-reliability environment.",
+      "sections": [
+        {
+          "heading": "Theme: Leadership in Nuclear",
+          "items": [
+            "Leadership in high-reliability environments",
+            "Safety culture",
+            "Decision-making under pressure",
+            "What leadership looks like at a major utility"
+          ]
+        },
+        {
+          "heading": "Opportunities Spotlight",
+          "items": [
+            "Duke's internship and co-op programs",
+            "Early-career rotational roles",
+            "What hiring managers look for",
+            "How UF students can prepare"
+          ]
+        }
       ]
     }
   ],
