@@ -1,6 +1,6 @@
 {
   "nextMeeting": {
-    "title": "General Body Meeting 1: Constellation Energy Speaker",
+    "title": "Speaker Series Meeting 1: Constellation Energy",
     "date": "2026-09-14T18:00:00-04:00",
     "location": "TBD",
     "note": "New members welcome — no nuclear background required."
@@ -12,7 +12,14 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "Welcome back! Officer introductions, semester roadmap, an overview of how to get involved this fall, and a presentation from Constellation Energy."
+      "description": "Welcome back! Join us for officer introductions, a semester roadmap, and an overview of how to get involved — followed by a presentation from Constellation Energy.",
+      "details": [
+        "Officer introductions and chapter overview",
+        "Fall semester event roadmap",
+        "How to join the PD or PI committee",
+        "Presentation from Constellation Energy speaker",
+        "Q&A with the speaker"
+      ]
     },
     {
       "title": "Speaker Series Meeting 2: Oak Ridge National Laboratory",
@@ -20,7 +27,12 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "TBD"
+      "description": "A presentation from a researcher or engineer at Oak Ridge National Laboratory — one of the nation's premier nuclear research facilities.",
+      "details": [
+        "Presentation from Oak Ridge National Laboratory",
+        "Q&A with the speaker",
+        "More details coming soon"
+      ]
     },
     {
       "title": "Speaker Series Meeting 3: Duke Energy",
@@ -28,7 +40,12 @@
       "time": "5:30 PM – 6:30 PM",
       "location": "TBD",
       "tag": "general",
-      "description": "TBD"
+      "description": "A presentation from Duke Energy, one of the largest electric power companies in the U.S. and a major operator of nuclear generating stations.",
+      "details": [
+        "Presentation from Duke Energy representative",
+        "Q&A with the speaker",
+        "More details coming soon"
+      ]
     }
   ],
   "past": [

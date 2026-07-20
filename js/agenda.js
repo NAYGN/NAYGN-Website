@@ -1,5 +1,4 @@
-/* Agenda page: upcoming events with tag filters + .ics download,
-   and a collapsible archive of past meeting notes */
+/* Agenda page: upcoming events with tag filters + .ics download */
 
 (function () {
   const list = document.getElementById('event-list');
@@ -15,8 +14,6 @@
       events = (data.upcoming || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
       render();
       renderCalendar(events);
-      const past = (data.past || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
-      renderPast(past);
     })
     .catch(() => {
       list.innerHTML = '<p class="empty-msg">Unable to load the agenda right now.</p>';
@@ -55,87 +52,49 @@
         const mon = date.toLocaleDateString('en-US', { month: 'short' });
         const tagClass = `tag-${ev.tag}`;
         const tagLabel = TAG_LABELS[ev.tag] || ev.tag;
+        const detailsList = (ev.details || []).length
+          ? `<ul class="event-details-list">${(ev.details).map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
+          : '';
 
         return `
           <article class="event-row reveal is-visible">
-            <div class="event-date">
-              <span class="day">${day}</span>
-              <span class="mon">${mon}</span>
-            </div>
-            <div class="event-body">
-              <span class="event-tag ${tagClass}">${escapeHtml(tagLabel)}</span>
-              <h3>${escapeHtml(ev.title)}</h3>
-              <div class="meta">${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</div>
-              <p>${escapeHtml(ev.description)}</p>
-            </div>
-            <div class="event-actions">
-              <a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>
+            <button class="event-summary" aria-expanded="false">
+              <div class="event-date">
+                <span class="day">${day}</span>
+                <span class="mon">${mon}</span>
+              </div>
+              <div class="event-body">
+                <span class="event-tag ${tagClass}">${escapeHtml(tagLabel)}</span>
+                <h3>${escapeHtml(ev.title)}</h3>
+                <div class="meta">${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</div>
+              </div>
+              <span class="event-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="event-panel">
+              <div class="event-panel-inner">
+                <p>${escapeHtml(ev.description)}</p>
+                ${detailsList}
+                <a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>
+              </div>
             </div>
           </article>
         `;
       })
       .join('');
-  }
 
-  function renderPast(past) {
-    const container = document.getElementById('past-events');
-    if (!container) return;
-
-    if (past.length === 0) {
-      container.innerHTML = '<p class="empty-msg">No past meeting notes yet.</p>';
-      return;
-    }
-
-    container.innerHTML = past
-      .map((ev, i) => {
-        const date = new Date(ev.date + 'T00:00:00');
-        const dateStr = date.toLocaleDateString('en-US', {
-          month: 'long',
-          day: 'numeric',
-          year: 'numeric',
-        });
-        const notesList = (ev.notes || []).map((n) => `<li>${escapeHtml(n)}</li>`).join('');
-
-        return `
-          <div class="accordion-item" data-index="${i}">
-            <button class="accordion-trigger" aria-expanded="false">
-              <span>
-                <span class="t-date">${dateStr}</span>
-                <h3>${escapeHtml(ev.title)}</h3>
-              </span>
-              <span class="accordion-icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-panel-inner">
-                <p>${escapeHtml(ev.summary)}</p>
-                <ul>${notesList}</ul>
-              </div>
-            </div>
-          </div>
-        `;
-      })
-      .join('');
-
-    if (window.location.hash === '#join') {
-      setTimeout(() => {
-        document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
-    }
-
-    container.querySelectorAll('.accordion-trigger').forEach((trigger) => {
-      trigger.addEventListener('click', () => {
-        const item = trigger.closest('.accordion-item');
-        const panel = item.querySelector('.accordion-panel');
-        const isOpen = item.classList.contains('is-open');
-
+    list.querySelectorAll('.event-summary').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const article = btn.closest('.event-row');
+        const panel = article.querySelector('.event-panel');
+        const isOpen = article.classList.contains('is-open');
         if (isOpen) {
-          panel.style.maxHeight = '0px';
-          item.classList.remove('is-open');
-          trigger.setAttribute('aria-expanded', 'false');
+          panel.style.maxHeight = '0';
+          article.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
         } else {
           panel.style.maxHeight = panel.scrollHeight + 'px';
-          item.classList.add('is-open');
-          trigger.setAttribute('aria-expanded', 'true');
+          article.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
