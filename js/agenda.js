@@ -115,6 +115,12 @@
       })
       .join('');
 
+    if (window.location.hash === '#join') {
+      setTimeout(() => {
+        document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+
     container.querySelectorAll('.accordion-trigger').forEach((trigger) => {
       trigger.addEventListener('click', () => {
         const item = trigger.closest('.accordion-item');
