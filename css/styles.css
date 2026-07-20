@@ -999,11 +999,6 @@ hr.accent {
   .event-actions { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; padding-top: 0.75rem; border-top: 1px dashed var(--line); }
 }
 
-.instagram-embed-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
 .calendar-embed {
   border: 1px solid var(--line);
   border-radius: var(--radius);
