@@ -14,6 +14,7 @@
     .then((data) => {
       events = (data.upcoming || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
       render();
+      renderCalendar(events);
       const past = (data.past || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
       renderPast(past);
     })
@@ -138,6 +139,49 @@
         }
       });
     });
+  }
+
+  function renderCalendar(events) {
+    const container = document.getElementById('semester-calendar');
+    if (!container || events.length === 0) return;
+
+    const eventMap = {};
+    events.forEach((ev) => { eventMap[ev.date] = ev; });
+
+    const months = [...new Set(events.map((ev) => {
+      const d = new Date(ev.date + 'T00:00:00');
+      return `${d.getFullYear()}-${d.getMonth()}`;
+    }))].sort();
+
+    const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const DAY_ABBR = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    container.innerHTML = months.map((key) => {
+      const [year, month] = key.split('-').map(Number);
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      const headers = DAY_ABBR.map((d) => `<div class="cal-hdr">${d}</div>`).join('');
+      let cells = '';
+      for (let i = 0; i < firstDay; i++) cells += '<div class="cal-day"></div>';
+      for (let d = 1; d <= daysInMonth; d++) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        const ev = eventMap[dateStr];
+        cells += ev
+          ? `<div class="cal-day has-event">
+               <span class="cal-num">${d}</span>
+               <span class="cal-ev-title">${escapeHtml(ev.title)}</span>
+               <span class="cal-ev-time">${escapeHtml(ev.time)}</span>
+             </div>`
+          : `<div class="cal-day"><span class="cal-num">${d}</span></div>`;
+      }
+
+      return `
+        <div class="cal-month">
+          <h3 class="cal-month-name">${MONTH_NAMES[month]} ${year}</h3>
+          <div class="cal-grid">${headers}${cells}</div>
+        </div>`;
+    }).join('');
   }
 
   function buildIcsHref(ev) {
