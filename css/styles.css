@@ -735,6 +735,31 @@ hr.accent {
 @media (max-width: 860px) {
   .reactor-wrap { grid-template-columns: 1fr; }
 }
+.reactor-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.reactor-tab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.reactor-tab:hover { border-color: var(--uf-blue); color: var(--naygn-navy); }
+.reactor-tab.is-active {
+  background: var(--naygn-navy);
+  color: #fff;
+  border-color: var(--naygn-navy);
+}
 .reactor-diagram {
   position: relative;
   background: #fff;
@@ -743,6 +768,8 @@ hr.accent {
   padding: 1.5rem;
 }
 .reactor-diagram svg { width: 100%; height: auto; display: block; }
+.reactor-svg.is-hidden,
+.reactor-key.is-hidden { display: none; }
 .reactor-diagram .part {
   cursor: pointer;
   transition: fill 0.2s var(--ease), fill-opacity 0.2s var(--ease);
