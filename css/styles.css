@@ -1043,6 +1043,7 @@ hr.accent {
   grid-template-columns: repeat(7, 1fr);
   border-left: 1px solid var(--line);
   border-top: 1px solid var(--line);
+  background: #fff;
 }
 .cal-hdr {
   text-align: center;
@@ -1073,7 +1074,7 @@ hr.accent {
   line-height: 1;
 }
 .cal-day.has-event {
-  background: rgba(0,33,165,0.07);
+  background: #eef1fa;
 }
 .cal-day.has-event .cal-num {
   color: var(--uf-blue);
