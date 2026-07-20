@@ -1004,7 +1004,7 @@ hr.accent {
   margin: 0 auto;
 }
 .cal-month {
-  background: var(--surface);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -1064,7 +1064,7 @@ hr.accent {
   gap: 3px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: var(--surface);
+  background: #fff;
 }
 .cal-num {
   font-size: 0.8rem;
