@@ -143,24 +143,21 @@
 
   function renderCalendar(events) {
     const container = document.getElementById('semester-calendar');
-    if (!container || events.length === 0) return;
+    if (!container) return;
 
     const eventMap = {};
     events.forEach((ev) => { eventMap[ev.date] = ev; });
 
-    const months = [...new Set(events.map((ev) => {
-      const d = new Date(ev.date + 'T00:00:00');
-      return `${d.getFullYear()}-${d.getMonth()}`;
-    }))].sort();
-
     const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     const DAY_ABBR = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-    container.innerHTML = months.map((key) => {
-      const [year, month] = key.split('-').map(Number);
+    const firstEvent = events[0] ? new Date(events[0].date + 'T00:00:00') : new Date();
+    let curYear = firstEvent.getFullYear();
+    let curMonth = firstEvent.getMonth();
+
+    function buildMonth(year, month) {
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
-
       const headers = DAY_ABBR.map((d) => `<div class="cal-hdr">${d}</div>`).join('');
       let cells = '';
       for (let i = 0; i < firstDay; i++) cells += '<div class="cal-day"></div>';
@@ -175,13 +172,33 @@
              </div>`
           : `<div class="cal-day"><span class="cal-num">${d}</span></div>`;
       }
+      return `<div class="cal-grid">${headers}${cells}</div>`;
+    }
 
-      return `
+    function draw() {
+      container.innerHTML = `
         <div class="cal-month">
-          <h3 class="cal-month-name">${MONTH_NAMES[month]} ${year}</h3>
-          <div class="cal-grid">${headers}${cells}</div>
+          <div class="cal-nav">
+            <button class="cal-nav-btn" id="cal-prev" aria-label="Previous month">&#8592;</button>
+            <h3 class="cal-month-name">${MONTH_NAMES[curMonth]} ${curYear}</h3>
+            <button class="cal-nav-btn" id="cal-next" aria-label="Next month">&#8594;</button>
+          </div>
+          ${buildMonth(curYear, curMonth)}
         </div>`;
-    }).join('');
+
+      document.getElementById('cal-prev').addEventListener('click', () => {
+        curMonth--;
+        if (curMonth < 0) { curMonth = 11; curYear--; }
+        draw();
+      });
+      document.getElementById('cal-next').addEventListener('click', () => {
+        curMonth++;
+        if (curMonth > 11) { curMonth = 0; curYear++; }
+        draw();
+      });
+    }
+
+    draw();
   }
 
   function buildIcsHref(ev) {
