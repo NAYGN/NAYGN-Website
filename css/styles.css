@@ -404,24 +404,6 @@ hr.accent {
   aspect-ratio: 1;
 }
 .atom svg { width: 100%; height: 100%; }
-.atom .orbit {
-  fill: none;
-  stroke: rgba(250,248,242,0.28);
-  stroke-width: 1;
-  stroke-dasharray: 2 6;
-  transform-origin: 100px 100px;
-}
-.atom .orbit.o1 { animation: spin 14s linear infinite; }
-.atom .orbit.o2 { animation: spin 20s linear infinite reverse; }
-.atom .orbit.o3 { animation: spin 26s linear infinite; }
-.atom .electron { fill: var(--uf-orange); }
-.atom .electron.e2 { fill: var(--naygn-green); }
-.atom .electron.e3 { fill: #fff; }
-.atom .nucleus { fill: var(--uf-orange); filter: drop-shadow(0 0 14px rgba(250,70,22,0.65)); }
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.55; }
