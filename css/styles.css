@@ -1133,6 +1133,30 @@ hr.accent {
   line-height: 1.2;
 }
 
+.president-quote {
+  margin: 2rem 0 0;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border-left: 4px solid var(--uf-orange);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--uf-orange);
+}
+.president-quote p {
+  font-size: 0.97rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.75;
+  margin: 0 0 0.9rem;
+}
+.president-quote footer {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--uf-orange);
+  text-transform: uppercase;
+}
+
 .map-embed {
   border: 1px solid var(--line);
   border-radius: var(--radius);
