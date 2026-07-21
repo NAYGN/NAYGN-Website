@@ -19,8 +19,8 @@
       text: 'Holds the primary-loop water under enough pressure that it stays liquid at high temperature instead of boiling.',
     },
     generator: {
-      label: 'Steam Generator',
-      text: 'Heat from the reactor coolant boils a separate supply of water into steam, without the two water systems ever mixing.',
+      label: 'Steam Generator / Boiler Unit',
+      text: 'Heat from the reactor coolant boils a separate supply of water into steam, without the coolant and the steam/feedwater ever mixing. In an AGR, the boiler units sit inside the same pressure vessel as the core.',
     },
     turbine: {
       label: 'Turbine',
@@ -40,13 +40,13 @@
     },
 
     /* ---- Advanced Gas-cooled Reactor ---- */
-    shielding: {
-      label: 'Concrete Shielding',
-      text: 'A massive concrete biological shield surrounding the reactor that absorbs radiation and protects workers and the environment.',
-    },
     vessel: {
-      label: 'Steel Pressure Vessel',
-      text: 'Contains the graphite core and pressurized carbon-dioxide coolant, holding the gas at high pressure as it circulates through the reactor.',
+      label: 'Prestressed Concrete Pressure Vessel',
+      text: 'A massive steel-lined, prestressed concrete vessel that does double duty: the steel liner seals in the pressurized CO₂ coolant, while the thick concrete body provides biological shielding. Unlike a PWR, the AGR core and boiler units both sit inside this single vessel.',
+    },
+    standpipes: {
+      label: 'Standpipes',
+      text: 'Vertical penetrations through the top of the pressure vessel that give access to the control rods and fuel channels below for refueling and maintenance.',
     },
     moderator: {
       label: 'Graphite Moderator',
@@ -58,15 +58,15 @@
     },
     rods: {
       label: 'Control Rods',
-      text: 'Neutron-absorbing rods raised or lowered into the core to control the rate of fission — or to shut the reactor down entirely.',
+      text: 'Neutron-absorbing rods raised or lowered into the core through the standpipes to control the rate of fission — or to shut the reactor down entirely.',
     },
     coolant: {
       label: 'Cooling Gas (CO₂)',
-      text: 'Pressurized carbon-dioxide gas is driven through the hot core, carrying heat to the steam generator. AGRs run hotter than water-cooled reactors, giving higher efficiency.',
+      text: 'Pressurized carbon-dioxide gas is driven up through the hot core, carrying heat sideways to the boiler unit. AGRs run hotter than water-cooled reactors, giving higher thermal efficiency.',
     },
     circulator: {
       label: 'Gas Circulator',
-      text: 'Powerful fans that continuously drive the carbon-dioxide coolant around the primary circuit, from the boiler back through the reactor core.',
+      text: 'Powerful fans, mounted inside the pressure vessel below the boiler, that continuously drive the cooled carbon-dioxide gas back into the bottom of the reactor core.',
     },
   };
 
