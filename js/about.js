@@ -44,10 +44,6 @@
       label: 'Prestressed Concrete Pressure Vessel',
       text: 'A massive steel-lined, prestressed concrete vessel that does double duty: the steel liner seals in the pressurized CO₂ coolant, while the thick concrete body provides biological shielding. Unlike a PWR, the AGR core and boiler units both sit inside this single vessel.',
     },
-    standpipes: {
-      label: 'Standpipes',
-      text: 'Vertical penetrations through the top of the pressure vessel that give access to the control rods and fuel channels below for refueling and maintenance.',
-    },
     moderator: {
       label: 'Graphite Moderator',
       text: 'Blocks of graphite slow down the neutrons released by fission so the chain reaction can sustain itself — the defining feature of a gas-cooled reactor.',
@@ -58,7 +54,7 @@
     },
     rods: {
       label: 'Control Rods',
-      text: 'Neutron-absorbing rods raised or lowered into the core through the standpipes to control the rate of fission — or to shut the reactor down entirely.',
+      text: 'Neutron-absorbing rods raised or lowered into the core to control the rate of fission — or to shut the reactor down entirely.',
     },
     coolant: {
       label: 'Cooling Gas (CO₂)',
