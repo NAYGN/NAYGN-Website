@@ -56,20 +56,33 @@
       flex-wrap: wrap;
       margin-top: 0.85rem;
     }
-    .fallback-note {
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      margin-top: 0.7rem;
-    }
-    .fallback-note code {
-      font-family: var(--font-mono);
+    .fallback-chip {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.55rem;
+      margin-top: 0.9rem;
+      padding: 0.5rem 0.85rem 0.5rem 0.65rem;
       background: var(--paper-dim);
       border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: 0.1rem 0.4rem;
-      color: var(--ink);
-      font-weight: 700;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
     }
+    .fallback-chip svg { flex-shrink: 0; width: 15px; height: 15px; opacity: 0.85; }
+    .fallback-chip code {
+      font-family: var(--font-mono);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.18rem 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 0.76rem;
+    }
+    .fallback-chip.is-orange svg { color: var(--uf-orange); }
+    .fallback-chip.is-orange code { background: var(--uf-orange); }
+    .fallback-chip.is-green svg { color: var(--naygn-green); }
+    .fallback-chip.is-green code { background: var(--naygn-green); }
   </style>
 </head>
 <body>
@@ -130,7 +143,15 @@
                   href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3Agw7eD5TioPblBApmxsUMuFk1ss2CQUdk3cQ-6yIxsLk1%40thread.tacv2%2FGeneral%3FtenantId%3D0d4da0f8-4a31-4d76-ace6-0a62331e1b84%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio&type=channel&deeplinkId=72fbf5be-4fb5-40ed-8a55-b87756ddd74d&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
                   target="_blank" rel="noopener">Join Teams →</a>
               </div>
-              <p class="fallback-note">Link not working? Open Microsoft Teams, choose "Join or create a team," and enter code <code>g16fsmj</code>.</p>
+              <div class="fallback-chip is-orange">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/>
+                  <line x1="8" y1="7.1" x2="8" y2="11.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <circle cx="8" cy="4.6" r="0.9" fill="currentColor"/>
+                </svg>
+                <span>Backup — team code</span>
+                <code>G16FSMJ</code>
+              </div>
             </div>
           </li>
           <li>
@@ -142,7 +163,15 @@
                 <a class="btn btn-green" href="https://www.instagram.com/naygnuf/" target="_blank" rel="noopener">Instagram →</a>
                 <a class="btn btn-green" href="https://www.linkedin.com/in/naygn-uf-82b17b412/" target="_blank" rel="noopener">LinkedIn →</a>
               </div>
-              <p class="fallback-note">Link not working? Search Instagram for <code>@naygnuf</code>.</p>
+              <div class="fallback-chip is-green">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="1.8" y="1.8" width="12.4" height="12.4" rx="3.6" stroke="currentColor" stroke-width="1.3"/>
+                  <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/>
+                  <circle cx="11.6" cy="4.4" r="0.7" fill="currentColor"/>
+                </svg>
+                <span>Backup — search Instagram</span>
+                <code>@naygnuf</code>
+              </div>
             </div>
           </li>
           <li>
