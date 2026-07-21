@@ -346,7 +346,7 @@
 
             </svg>
 
-            <svg class="reactor-svg is-hidden" data-diagram="agr" viewBox="-70 0 730 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified diagram of an advanced gas-cooled reactor (AGR) power plant">
+            <svg class="reactor-svg is-hidden" data-diagram="agr" viewBox="-70 0 810 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified diagram of an advanced gas-cooled reactor (AGR) power plant">
 
               <!-- DIAGRAM TITLE -->
               <text x="330" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#0E1F3C" opacity="0.8" letter-spacing="0.03em" pointer-events="none">ADVANCED GAS-COOLED REACTOR (AGR)</text>
@@ -522,14 +522,33 @@
                 <line x1="406" y1="278.5" x2="406" y2="293.5" stroke="#0021A5" stroke-width="1"/>
                 <text x="406" y="318" text-anchor="middle" font-size="6.5" font-weight="700" fill="#0021A5" opacity="0.85">FEED PUMP</text>
               </g>
-              <!-- cooling circuit -->
+              <!-- ================= COOLING TOWER ================= -->
+              <path class="part" data-key="cooling"
+                d="M 650,344 Q 655,286 664,256 Q 660,244 660,232 L 712,232 Q 712,244 708,256 Q 717,286 722,344 Z"
+                fill="#0021A5" fill-opacity="0.09" stroke="#0021A5" stroke-width="1.5"/>
+              <clipPath id="agr-tc">
+                <path d="M 650,344 Q 655,286 664,256 Q 660,244 660,232 L 712,232 Q 712,244 708,256 Q 717,286 722,344 Z"/>
+              </clipPath>
+              <g stroke="#FA4616" stroke-width="0.8" opacity="0.28" clip-path="url(#agr-tc)" pointer-events="none">
+                <line x1="648" y1="252" x2="724" y2="252"/>
+                <line x1="648" y1="274" x2="724" y2="274"/>
+                <line x1="648" y1="298" x2="724" y2="298"/>
+                <line x1="648" y1="322" x2="724" y2="322"/>
+              </g>
+              <g stroke="#9CA3AF" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" pointer-events="none">
+                <path d="M 672,232 Q 668,215 672,200 Q 676,185 672,172"/>
+                <path d="M 686,232 Q 690,217 686,204"/>
+                <path d="M 700,232 Q 704,215 700,200 Q 696,185 700,172"/>
+              </g>
+              <text x="686" y="362" text-anchor="middle" font-size="9" font-weight="700" fill="#0021A5" opacity="0.8" pointer-events="none">COOLING TOWER</text>
+
+              <!-- cooling-water circuit: condenser <-> tower -->
               <g pointer-events="none">
-                <path d="M 608,254 H 632" stroke="#FA4616" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
-                <path d="M 632,300 H 620 V 278 H 608" stroke="#0021A5" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
-                <circle cx="620" cy="289" r="6.5" fill="#fff" stroke="#0021A5" stroke-width="1.3"/>
-                <line x1="613.5" y1="289" x2="626.5" y2="289" stroke="#0021A5" stroke-width="1"/>
-                <line x1="620" y1="282.5" x2="620" y2="295.5" stroke="#0021A5" stroke-width="1"/>
-                <text x="620" y="321" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0021A5" opacity="0.85">Cooling circuit</text>
+                <path d="M 608,254 H 650" stroke="#FA4616" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
+                <path d="M 650,300 H 628 V 278 H 608" stroke="#0021A5" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
+                <circle cx="628" cy="289" r="6.5" fill="#fff" stroke="#0021A5" stroke-width="1.3"/>
+                <line x1="621.5" y1="289" x2="634.5" y2="289" stroke="#0021A5" stroke-width="1"/>
+                <line x1="628" y1="282.5" x2="628" y2="295.5" stroke="#0021A5" stroke-width="1"/>
               </g>
 
             </svg>
@@ -561,6 +580,7 @@
               <li data-key="turbine"><span class="swatch" style="background:#4F9D6E;"></span> Steam Turbine</li>
               <li data-key="egen"><span class="swatch" style="background:#6B7280;"></span> Electric Generator</li>
               <li data-key="condenser"><span class="swatch" style="background:#0E1F3C;"></span> Condenser</li>
+              <li data-key="cooling"><span class="swatch" style="background:#0021A5;"></span> Cooling Tower</li>
             </ul>
           </div>
         </div>
