@@ -89,34 +89,5 @@
         }
       ]
     }
-  ],
-  "past": [
-    {
-      "title": "Biweekly Officer Meeting",
-      "date": "2026-06-17",
-      "tag": "",
-      "summary": "Officer meeting to discuss upcoming events and responsibilities.",
-      "notes": [
-        "Draft plan for fall semester events."
-      ]
-    },
-    {
-      "title": "Biweekly Officer Meeting",
-      "date": "2026-07-01",
-      "tag": "",
-      "summary": "Officer meeting covered launching a themed speaker series, restructuring governance, and addressing funding gaps.",
-      "notes": [
-        "Pursue funding for fall semester events."
-      ]
-    },
-    {
-      "title": "Biweekly Officer Meeting",
-      "date": "2026-07-15",
-      "tag": "",
-      "summary": "Officer meeting to finalize fall semester event plan and constitution. Discussed coordinating with ANS on outreach and looking for potential government outreach officers.",
-      "notes": [
-        "Advertise public information committee and professional development committee to recruit new members."
-      ]
-    }
   ]
 }
