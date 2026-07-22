@@ -697,6 +697,18 @@ hr.accent {
 .pillar h3 { font-size: 1.15rem; font-weight: 600; font-style: normal; margin: 0.6rem 0 0.6rem; color: var(--ink); }
 .pillar p { color: var(--ink-soft); font-size: 0.92rem; }
 
+#case-for-nuclear {
+  position: relative;
+  background:
+    linear-gradient(160deg, rgba(14,31,60,0.92), rgba(0,33,165,0.82)),
+    url('../assets/img/cooling-towers.webp') center/cover no-repeat;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+#case-for-nuclear .kicker { color: var(--naygn-green); }
+#case-for-nuclear .kicker::before { background: var(--naygn-green); }
+#case-for-nuclear h2 { color: var(--paper); }
+#case-for-nuclear .lede { color: rgba(250,248,242,0.78); }
+
 /* Timeline */
 .timeline {
   position: relative;
