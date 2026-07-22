@@ -16,11 +16,11 @@
     },
     pressurizer: {
       label: 'Pressure Tank (Pressurizer)',
-      text: 'Holds the primary-loop water under enough pressure that it stays liquid at high temperature instead of boiling.',
+      text: 'Maintains a high, stable pressure in the primary coolant to keep it liquid and prevent boiling at extreme temperatures.',
     },
     generator: {
       label: 'Steam Generator / Boiler Unit',
-      text: 'Heat from the reactor coolant boils a separate supply of water into steam, without the coolant and the steam/feedwater ever mixing. In an AGR, the boiler units sit inside the same pressure vessel as the core.',
+      text: 'Heat from the reactor coolant boils a separate supply of feedwater into steam, without ever mixing with it.',
     },
     turbine: {
       label: 'Turbine',
@@ -36,7 +36,7 @@
     },
     cooling: {
       label: 'Cooling Tower',
-      text: 'Releases leftover waste heat to the atmosphere. The plume you see is harmless water vapor, not radioactive emissions.',
+      text: 'Releases leftover waste heat from the condenser to the atmosphere. The plume you see is harmless water vapor, not radioactive emissions. Many plants instead use rivers, lakes, or oceans to discharge heat from the condenser.',
     },
 
     /* ---- Advanced Gas-cooled Reactor ---- */
