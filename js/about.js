@@ -1,4 +1,4 @@
-/* About page: interactive reactor diagrams (PWR + AGR) with tooltips + tabs */
+/* About page: interactive reactor diagrams (PWR + BWR + AGR) with tooltips + tabs */
 
 (function () {
   const tooltip = document.getElementById('reactor-tooltip');
@@ -32,11 +32,21 @@
     },
     condenser: {
       label: 'Condenser',
-      text: 'Cools the used steam back into water so it can be pumped to the steam generator and reused, closing the loop.',
+      text: 'Cools the used steam back into water so it can be pumped back into the steam supply and reused, closing the loop.',
     },
     cooling: {
       label: 'Cooling Tower',
       text: 'Releases leftover waste heat from the condenser to the atmosphere. The plume you see is harmless water vapor, not radioactive emissions. Many plants instead use rivers, lakes, or oceans to discharge heat from the condenser.',
+    },
+
+    /* ---- Boiling Water Reactor ---- */
+    'bwr-rpv': {
+      label: 'Reactor Pressure Vessel',
+      text: 'Houses the fuel and control rods. Unlike a PWR, water is allowed to boil directly inside the vessel — the steam that spins the turbine has passed straight through the reactor core, so there\'s no separate steam generator or pressurizer.',
+    },
+    separator: {
+      label: 'Steam Separator & Dryer',
+      text: 'Internals at the top of the vessel that spin water droplets out of the rising steam so only dry, high-quality steam continues on to the turbine.',
     },
 
     /* ---- Advanced Gas-cooled Reactor ---- */

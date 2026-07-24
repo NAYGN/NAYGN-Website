@@ -180,6 +180,7 @@
 
         <div class="reactor-tabs reveal">
           <button class="reactor-tab is-active" data-diagram="pwr">Pressurized Water Reactor (PWR)</button>
+          <button class="reactor-tab" data-diagram="bwr">Boiling Water Reactor (BWR)</button>
           <button class="reactor-tab" data-diagram="agr">Advanced Gas-cooled Reactor (AGR)</button>
         </div>
 
@@ -320,6 +321,151 @@
                 <path d="M 528,344 Q 533,286 542,256 Q 538,244 538,232 L 590,232 Q 590,244 586,256 Q 595,286 600,344 Z"/>
               </clipPath>
               <g stroke="#FA4616" stroke-width="0.8" opacity="0.28" clip-path="url(#pwr-tc)" pointer-events="none">
+                <line x1="526" y1="252" x2="602" y2="252"/>
+                <line x1="526" y1="274" x2="602" y2="274"/>
+                <line x1="526" y1="298" x2="602" y2="298"/>
+                <line x1="526" y1="322" x2="602" y2="322"/>
+              </g>
+              <g stroke="#9CA3AF" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" pointer-events="none">
+                <path d="M 550,232 Q 546,215 550,200 Q 554,185 550,172"/>
+                <path d="M 564,232 Q 568,217 564,204"/>
+                <path d="M 578,232 Q 582,215 578,200 Q 574,185 578,172"/>
+              </g>
+              <text x="564" y="362" text-anchor="middle" font-size="9" font-weight="700" fill="#0021A5" opacity="0.8" pointer-events="none">COOLING TOWER</text>
+              <!-- cooling-water circuit condenser <-> tower -->
+              <g pointer-events="none">
+                <path d="M 512,254 H 556" stroke="#FA4616" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
+                <path d="M 556,300 H 528 V 278 H 512" stroke="#0021A5" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
+                <circle cx="528" cy="289" r="6.5" fill="#fff" stroke="#0021A5" stroke-width="1.3"/>
+                <line x1="521.5" y1="289" x2="534.5" y2="289" stroke="#0021A5" stroke-width="1"/>
+                <line x1="528" y1="282.5" x2="528" y2="295.5" stroke="#0021A5" stroke-width="1"/>
+              </g>
+
+            </svg>
+
+            <svg class="reactor-svg is-hidden" data-diagram="bwr" viewBox="0 0 660 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified diagram of a boiling water reactor power plant">
+
+              <!-- DIAGRAM TITLE -->
+              <text x="330" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#0E1F3C" opacity="0.8" letter-spacing="0.03em" pointer-events="none">BOILING WATER REACTOR (BWR)</text>
+
+              <!-- ================= CONTAINMENT ================= -->
+              <path class="part" data-key="containment"
+                d="M 32,344 L 32,150 A 108,92 0 0 1 248,150 L 248,344 Z"
+                fill="#0E1F3C" fill-opacity="0.06" stroke="#0E1F3C" stroke-width="1.5"/>
+              <text x="140" y="362" text-anchor="middle" font-size="9" font-weight="700" fill="#0E1F3C" opacity="0.8" pointer-events="none">CONTAINMENT STRUCTURE</text>
+
+              <!-- ================= REACTOR PRESSURE VESSEL (single loop — water boils inside) ================= -->
+              <text x="140" y="116" text-anchor="middle" font-size="7.5" font-weight="700" fill="#FA4616" opacity="0.85" pointer-events="none">REACTOR PRESSURE VESSEL</text>
+              <rect class="part" data-key="bwr-rpv" x="90" y="126" width="100" height="184" rx="34"
+                fill="#FA4616" fill-opacity="0.13" stroke="#FA4616" stroke-width="1.5"/>
+
+              <!-- Steam separator / dryer zone (BWR-specific — no equivalent in a PWR) -->
+              <rect class="part" data-key="separator" x="98" y="150" width="84" height="70" rx="6"
+                fill="#0021A5" fill-opacity="0.08" stroke="#0021A5" stroke-width="1.2" stroke-dasharray="2 2"/>
+              <g stroke="#0021A5" stroke-width="1" fill="none" opacity="0.35" pointer-events="none">
+                <path d="M 104,166 Q 116,158 128,166 Q 140,174 152,166 Q 164,158 176,166"/>
+                <path d="M 104,182 Q 116,174 128,182 Q 140,190 152,182 Q 164,174 176,182"/>
+                <path d="M 104,198 Q 116,190 128,198 Q 140,206 152,198 Q 164,190 176,198"/>
+              </g>
+              <text x="140" y="213" text-anchor="middle" font-size="6" font-weight="700" fill="#0021A5" opacity="0.75" pointer-events="none">STEAM SEPARATOR / DRYER</text>
+
+              <!-- Water pool + fuel bundle -->
+              <rect x="98" y="222" width="84" height="80" rx="4" fill="#0021A5" fill-opacity="0.10" pointer-events="none"/>
+              <rect x="118" y="230" width="44" height="64" rx="3" fill="#FA4616" fill-opacity="0.30" pointer-events="none"/>
+              <g stroke="#FA4616" stroke-width="2" opacity="0.6" pointer-events="none">
+                <line x1="126" y1="234" x2="126" y2="290"/>
+                <line x1="135" y1="234" x2="135" y2="290"/>
+                <line x1="145" y1="234" x2="145" y2="290"/>
+                <line x1="154" y1="234" x2="154" y2="290"/>
+              </g>
+
+              <!-- Control rods — bottom-entry, unlike a PWR's top-mounted rods -->
+              <g class="part" data-key="rods">
+                <rect x="118" y="310" width="44" height="16" rx="3" fill="#FA4616" fill-opacity="0.20" stroke="#FA4616" stroke-width="1.2"/>
+                <g stroke="#FA4616" stroke-width="1.6" stroke-linecap="round" opacity="0.7">
+                  <line x1="130" y1="310" x2="130" y2="288"/>
+                  <line x1="140" y1="310" x2="140" y2="288"/>
+                  <line x1="150" y1="310" x2="150" y2="288"/>
+                </g>
+              </g>
+              <text x="140" y="337" text-anchor="middle" font-size="7" font-weight="700" fill="#FA4616" opacity="0.9" pointer-events="none">CONTROL RODS (BOTTOM-ENTRY)</text>
+
+              <!-- ================= STEAM LINE — straight from RPV to turbine, no steam generator ================= -->
+              <g pointer-events="none">
+                <path d="M 190,146 H 262 V 172 H 336" stroke="#4F9D6E" stroke-width="2.5" fill="none" stroke-dasharray="5 2"/>
+                <polygon points="332,168 340,172 332,176" fill="#4F9D6E"/>
+                <text x="262" y="138" text-anchor="middle" font-size="8.5" fill="#4F9D6E" font-weight="bold">STEAM LINE</text>
+              </g>
+
+              <!-- ================= TURBINE ================= -->
+              <path class="part" data-key="turbine"
+                d="M 340,150 L 406,136 L 406,210 L 340,196 Z"
+                fill="#4F9D6E" fill-opacity="0.16" stroke="#4F9D6E" stroke-width="1.5"/>
+              <g stroke="#4F9D6E" stroke-width="1" opacity="0.4" pointer-events="none">
+                <line x1="353" y1="152" x2="353" y2="194"/>
+                <line x1="366" y1="150" x2="366" y2="196"/>
+                <line x1="379" y1="147" x2="379" y2="199"/>
+                <line x1="392" y1="144" x2="392" y2="202"/>
+              </g>
+              <text x="373" y="128" text-anchor="middle" font-size="9" fill="#4F9D6E" font-weight="bold" pointer-events="none">TURBINE</text>
+
+              <!-- ================= ELECTRIC GENERATOR ================= -->
+              <rect x="406" y="167" width="20" height="12" rx="2" fill="#6B7280" pointer-events="none"/>
+              <rect class="part" data-key="egen" x="426" y="148" width="86" height="56" rx="4"
+                fill="#6B7280" fill-opacity="0.14" stroke="#6B7280" stroke-width="1.5"/>
+              <g pointer-events="none">
+                <text x="469" y="173" text-anchor="middle" font-size="8.5" fill="#444" font-weight="bold">ELECTRIC</text>
+                <text x="469" y="186" text-anchor="middle" font-size="8.5" fill="#444" font-weight="bold">GENERATOR</text>
+              </g>
+              <!-- transmission tower + spark (decorative) -->
+              <g pointer-events="none" opacity="0.55">
+                <g stroke="#9CA3AF" stroke-width="1" fill="none">
+                  <line x1="548" y1="72" x2="548" y2="134"/>
+                  <line x1="540" y1="88" x2="556" y2="88"/>
+                  <line x1="536" y1="100" x2="560" y2="100"/>
+                </g>
+                <path d="M 512,150 C 524,124 540,96 548,80" stroke="#E6B217" stroke-width="1.1" fill="none" stroke-dasharray="3 2"/>
+              </g>
+
+              <!-- ================= CONDENSER ================= -->
+              <path d="M 373,210 V 240" stroke="#4F9D6E" stroke-width="2" fill="none" stroke-dasharray="4 2" pointer-events="none"/>
+              <polygon points="369,236 373,244 377,236" fill="#4F9D6E" pointer-events="none"/>
+              <rect class="part" data-key="condenser" x="336" y="242" width="176" height="46" rx="3"
+                fill="#0E1F3C" fill-opacity="0.08" stroke="#0E1F3C" stroke-width="1.5"/>
+              <g stroke="#0021A5" stroke-width="0.7" opacity="0.28" pointer-events="none">
+                <line x1="346" y1="246" x2="346" y2="284"/>
+                <line x1="358" y1="246" x2="358" y2="284"/>
+                <line x1="370" y1="246" x2="370" y2="284"/>
+                <line x1="382" y1="246" x2="382" y2="284"/>
+                <line x1="394" y1="246" x2="394" y2="284"/>
+                <line x1="406" y1="246" x2="406" y2="284"/>
+                <line x1="418" y1="246" x2="418" y2="284"/>
+                <line x1="430" y1="246" x2="430" y2="284"/>
+                <line x1="442" y1="246" x2="442" y2="284"/>
+                <line x1="454" y1="246" x2="454" y2="284"/>
+                <line x1="466" y1="246" x2="466" y2="284"/>
+                <line x1="478" y1="246" x2="478" y2="284"/>
+                <line x1="490" y1="246" x2="490" y2="284"/>
+                <line x1="502" y1="246" x2="502" y2="284"/>
+              </g>
+              <text x="424" y="269" text-anchor="middle" font-size="9.5" fill="#0E1F3C" font-weight="bold" pointer-events="none">CONDENSER</text>
+              <!-- feedwater return: condenser -> straight back into the reactor vessel -->
+              <g pointer-events="none">
+                <path d="M 336,266 H 268 V 300 H 190" stroke="#0021A5" stroke-width="1.6" fill="none" stroke-dasharray="3 2"/>
+                <circle cx="268" cy="283" r="7.5" fill="#fff" stroke="#0021A5" stroke-width="1.4"/>
+                <line x1="260.5" y1="283" x2="275.5" y2="283" stroke="#0021A5" stroke-width="1"/>
+                <line x1="268" y1="275.5" x2="268" y2="290.5" stroke="#0021A5" stroke-width="1"/>
+                <text x="268" y="318" text-anchor="middle" font-size="6.5" font-weight="700" fill="#0021A5" opacity="0.85">FEED PUMP</text>
+              </g>
+
+              <!-- ================= COOLING TOWER ================= -->
+              <path class="part" data-key="cooling"
+                d="M 528,344 Q 533,286 542,256 Q 538,244 538,232 L 590,232 Q 590,244 586,256 Q 595,286 600,344 Z"
+                fill="#0021A5" fill-opacity="0.09" stroke="#0021A5" stroke-width="1.5"/>
+              <clipPath id="bwr-tc">
+                <path d="M 528,344 Q 533,286 542,256 Q 538,244 538,232 L 590,232 Q 590,244 586,256 Q 595,286 600,344 Z"/>
+              </clipPath>
+              <g stroke="#FA4616" stroke-width="0.8" opacity="0.28" clip-path="url(#bwr-tc)" pointer-events="none">
                 <line x1="526" y1="252" x2="602" y2="252"/>
                 <line x1="526" y1="274" x2="602" y2="274"/>
                 <line x1="526" y1="298" x2="602" y2="298"/>
@@ -560,6 +706,16 @@
               <li data-key="rpv"><span class="swatch" style="background:#FA4616;"></span> Reactor Pressure Vessel</li>
               <li data-key="pressurizer"><span class="swatch" style="background:#FA4616;"></span> Pressure Tank</li>
               <li data-key="generator"><span class="swatch" style="background:#0021A5;"></span> Steam Generator</li>
+              <li data-key="turbine"><span class="swatch" style="background:#4F9D6E;"></span> Turbine</li>
+              <li data-key="egen"><span class="swatch" style="background:#6B7280;"></span> Electric Generator</li>
+              <li data-key="condenser"><span class="swatch" style="background:#0E1F3C;"></span> Condenser</li>
+              <li data-key="cooling"><span class="swatch" style="background:#0021A5;"></span> Cooling Tower</li>
+            </ul>
+            <ul class="reactor-key is-hidden" data-diagram="bwr">
+              <li data-key="containment"><span class="swatch" style="background:#0E1F3C;"></span> Containment Structure</li>
+              <li data-key="bwr-rpv"><span class="swatch" style="background:#FA4616;"></span> Reactor Pressure Vessel</li>
+              <li data-key="separator"><span class="swatch" style="background:#0021A5;"></span> Steam Separator / Dryer</li>
+              <li data-key="rods"><span class="swatch" style="background:#FA4616;"></span> Control Rods</li>
               <li data-key="turbine"><span class="swatch" style="background:#4F9D6E;"></span> Turbine</li>
               <li data-key="egen"><span class="swatch" style="background:#6B7280;"></span> Electric Generator</li>
               <li data-key="condenser"><span class="swatch" style="background:#0E1F3C;"></span> Condenser</li>
