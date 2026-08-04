@@ -11,7 +11,12 @@
   fetch('data/events.json')
     .then((r) => r.json())
     .then((data) => {
-      events = (data.upcoming || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+      events = (data.upcoming || []).slice().sort((a, b) => {
+        const aTbd = a.date === 'TBD';
+        const bTbd = b.date === 'TBD';
+        if (aTbd || bTbd) return aTbd === bTbd ? 0 : aTbd ? 1 : -1;
+        return new Date(a.date) - new Date(b.date);
+      });
       render();
       renderCalendar(events);
     })
@@ -47,11 +52,15 @@
 
     list.innerHTML = filtered
       .map((ev) => {
-        const date = new Date(ev.date + 'T00:00:00');
-        const day = date.toLocaleDateString('en-US', { day: '2-digit' });
-        const mon = date.toLocaleDateString('en-US', { month: 'short' });
+        const isTbd = ev.date === 'TBD';
+        const date = isTbd ? null : new Date(ev.date + 'T00:00:00');
+        const day = isTbd ? 'TBD' : date.toLocaleDateString('en-US', { day: '2-digit' });
+        const mon = isTbd ? '' : date.toLocaleDateString('en-US', { month: 'short' });
         const tagClass = `tag-${ev.tag}`;
         const tagLabel = TAG_LABELS[ev.tag] || ev.tag;
+        const metaText = ev.time === 'TBD' && ev.location === 'TBD'
+          ? 'Date, time & location to be announced'
+          : `${ev.time} · ${ev.location}`;
         const hasSections = (ev.sections || []).length > 0;
         const hasDetails = hasSections || (ev.details || []).length > 0;
         const panelContent = hasSections
@@ -71,7 +80,7 @@
             <div class="event-body">
               <span class="event-tag ${tagClass}">${escapeHtml(tagLabel)}</span>
               <h3>${escapeHtml(ev.title)}</h3>
-              <div class="meta">${escapeHtml(ev.time)} · ${escapeHtml(ev.location)}</div>
+              <div class="meta">${escapeHtml(metaText)}</div>
               <p>${escapeHtml(ev.description)}</p>
               ${hasDetails ? `
               <div class="event-panel">
@@ -79,7 +88,7 @@
               </div>` : ''}
             </div>
             <div class="event-actions">
-              <a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>
+              ${isTbd ? '' : `<a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>`}
               ${hasDetails ? '<span class="event-chevron" aria-hidden="true"></span>' : ''}
             </div>
           </article>
@@ -107,13 +116,15 @@
     const container = document.getElementById('semester-calendar');
     if (!container) return;
 
+    const datedEvents = events.filter((ev) => ev.date !== 'TBD');
+
     const eventMap = {};
-    events.forEach((ev) => { eventMap[ev.date] = ev; });
+    datedEvents.forEach((ev) => { eventMap[ev.date] = ev; });
 
     const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     const DAY_ABBR = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-    const firstEvent = events[0] ? new Date(events[0].date + 'T00:00:00') : new Date();
+    const firstEvent = datedEvents[0] ? new Date(datedEvents[0].date + 'T00:00:00') : new Date();
     let curYear = firstEvent.getFullYear();
     let curMonth = firstEvent.getMonth();
 

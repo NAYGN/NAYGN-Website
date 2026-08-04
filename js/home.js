@@ -78,25 +78,36 @@
       const noteEl = root.querySelector('[data-field="note"]');
       const whenEl = root.querySelector('[data-field="when"]');
 
-      const target = new Date(meeting.date);
+      const isTbd = !meeting.date || meeting.date === 'TBD';
+      const target = isTbd ? null : new Date(meeting.date);
 
       if (titleEl) titleEl.textContent = meeting.title;
       if (locEl) locEl.textContent = meeting.location;
       if (noteEl) noteEl.textContent = meeting.note || '';
       if (whenEl) {
-        whenEl.textContent = target.toLocaleString('en-US', {
-          weekday: 'long',
-          month: 'long',
-          day: 'numeric',
-          hour: 'numeric',
-          minute: '2-digit',
-        });
+        whenEl.textContent = isTbd
+          ? 'Date & time to be announced'
+          : target.toLocaleString('en-US', {
+              weekday: 'long',
+              month: 'long',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: '2-digit',
+            });
       }
 
       const days = root.querySelector('[data-unit="days"]');
       const hours = root.querySelector('[data-unit="hours"]');
       const mins = root.querySelector('[data-unit="minutes"]');
       const secs = root.querySelector('[data-unit="seconds"]');
+
+      if (isTbd) {
+        if (days) days.textContent = '--';
+        if (hours) hours.textContent = '--';
+        if (mins) mins.textContent = '--';
+        if (secs) secs.textContent = '--';
+        return;
+      }
 
       function tick() {
         const now = new Date();
