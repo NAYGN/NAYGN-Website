@@ -8,14 +8,20 @@
   let events = [];
   let activeTag = 'all';
 
+  function isValidDate(d) {
+    return d instanceof Date && !isNaN(d.getTime());
+  }
+
   fetch('data/events.json')
     .then((r) => r.json())
     .then((data) => {
       events = (data.upcoming || []).slice().sort((a, b) => {
-        const aTbd = a.date === 'TBD';
-        const bTbd = b.date === 'TBD';
-        if (aTbd || bTbd) return aTbd === bTbd ? 0 : aTbd ? 1 : -1;
-        return new Date(a.date) - new Date(b.date);
+        const ad = new Date(a.date);
+        const bd = new Date(b.date);
+        const aBad = !isValidDate(ad);
+        const bBad = !isValidDate(bd);
+        if (aBad || bBad) return aBad === bBad ? 0 : aBad ? 1 : -1;
+        return ad - bd;
       });
       render();
       renderCalendar(events);
@@ -52,15 +58,18 @@
 
     list.innerHTML = filtered
       .map((ev) => {
-        const isTbd = ev.date === 'TBD';
-        const date = isTbd ? null : new Date(ev.date + 'T00:00:00');
+        const parsedDate = new Date(ev.date + 'T00:00:00');
+        const isTbd = !isValidDate(parsedDate);
+        const date = isTbd ? null : parsedDate;
         const day = isTbd ? 'TBD' : date.toLocaleDateString('en-US', { day: '2-digit' });
         const mon = isTbd ? '' : date.toLocaleDateString('en-US', { month: 'short' });
         const tagClass = `tag-${ev.tag}`;
         const tagLabel = TAG_LABELS[ev.tag] || ev.tag;
-        const metaText = ev.time === 'TBD' && ev.location === 'TBD'
+        const timeIsTbd = !ev.time || ev.time === 'TBD';
+        const locIsTbd = !ev.location || ev.location === 'TBD';
+        const metaText = timeIsTbd && locIsTbd
           ? 'Date, time & location to be announced'
-          : `${ev.time} · ${ev.location}`;
+          : `${timeIsTbd ? 'Time TBD' : ev.time} · ${locIsTbd ? 'Location TBD' : ev.location}`;
         const hasSections = (ev.sections || []).length > 0;
         const hasDetails = hasSections || (ev.details || []).length > 0;
         const panelContent = hasSections
@@ -116,7 +125,7 @@
     const container = document.getElementById('semester-calendar');
     if (!container) return;
 
-    const datedEvents = events.filter((ev) => ev.date !== 'TBD');
+    const datedEvents = events.filter((ev) => isValidDate(new Date(ev.date + 'T00:00:00')));
 
     const eventMap = {};
     datedEvents.forEach((ev) => { eventMap[ev.date] = ev; });

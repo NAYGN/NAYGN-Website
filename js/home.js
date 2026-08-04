@@ -15,11 +15,13 @@
       list.innerHTML = items
         .map((item) => {
           const date = new Date(item.date + 'T00:00:00');
-          const dateStr = date.toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-          });
+          const dateStr = isNaN(date.getTime())
+            ? 'TBD'
+            : date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              });
           return `
             <article class="note-card reveal">
               <span class="date">${dateStr}</span>
@@ -78,8 +80,9 @@
       const noteEl = root.querySelector('[data-field="note"]');
       const whenEl = root.querySelector('[data-field="when"]');
 
-      const isTbd = !meeting.date || meeting.date === 'TBD';
-      const target = isTbd ? null : new Date(meeting.date);
+      const parsedTarget = meeting.date ? new Date(meeting.date) : null;
+      const isTbd = !parsedTarget || isNaN(parsedTarget.getTime());
+      const target = isTbd ? null : parsedTarget;
 
       if (titleEl) titleEl.textContent = meeting.title;
       if (locEl) locEl.textContent = meeting.location;
