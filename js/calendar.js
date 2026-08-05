@@ -1,4 +1,4 @@
-/* Agenda page: upcoming events with tag filters + .ics download */
+/* Calendar page: upcoming events with tag filters + .ics download */
 
 (function () {
   const list = document.getElementById('event-list');
@@ -27,7 +27,7 @@
       renderCalendar(events);
     })
     .catch(() => {
-      list.innerHTML = '<p class="empty-msg">Unable to load the agenda right now.</p>';
+      list.innerHTML = '<p class="empty-msg">Unable to load the calendar right now.</p>';
     });
 
   if (filterBar) {
@@ -189,7 +189,7 @@
     const ics = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//NAYGN at UF//Agenda//EN',
+      'PRODID:-//NAYGN at UF//Calendar//EN',
       'BEGIN:VEVENT',
       `UID:${slugify(ev.title)}-${ev.date}@naygn-uf`,
       `DTSTART:${start}`,
