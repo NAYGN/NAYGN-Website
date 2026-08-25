@@ -12,7 +12,7 @@
     return d instanceof Date && !isNaN(d.getTime());
   }
 
-  fetch('data/events.json')
+  fetch('data/events.json', { cache: 'no-store' })
     .then((r) => r.json())
     .then((data) => {
       events = (data.upcoming || []).filter((ev) => !ev.hidden).sort((a, b) => {

@@ -4,7 +4,7 @@
   const list = document.getElementById('announcement-list');
   if (!list) return;
 
-  fetch('data/notes.json')
+  fetch('data/notes.json', { cache: 'no-store' })
     .then((r) => r.json())
     .then((data) => {
       const items = (data.announcements || []).slice(0, 3);
@@ -69,7 +69,7 @@
   const root = document.getElementById('next-meeting');
   if (!root) return;
 
-  fetch('data/events.json')
+  fetch('data/events.json', { cache: 'no-store' })
     .then((r) => r.json())
     .then((data) => {
       const meeting = data.nextMeeting;

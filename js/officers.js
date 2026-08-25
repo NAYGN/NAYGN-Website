@@ -5,7 +5,7 @@
   const grid = document.getElementById('officer-grid');
   if (!grid) return;
 
-  fetch('data/officers.json')
+  fetch('data/officers.json', { cache: 'no-store' })
     .then((r) => r.json())
     .then((data) => {
       renderOfficers(data.officers || []);
