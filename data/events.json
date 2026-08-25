@@ -1,5 +1,6 @@
 {
   "nextMeeting": {
+    "hidden": true,
     "title": "Speaker Series Meeting 1: Constellation Energy",
     "date": "2026-09-16T17:30:00-04:00",
     "location": "TBD",
@@ -7,6 +8,7 @@
   },
   "upcoming": [
     {
+      "hidden": true,
       "title": "Speaker Series Meeting 1: Constellation Energy",
       "date": "2026-09-16",
       "time": "5:30 PM – 6:30 PM",
@@ -34,6 +36,7 @@
       ]
     },
     {
+      "hidden": true,
       "title": "Speaker Series Meeting 2: Oak Ridge National Laboratory",
       "date": "TBD",
       "time": "TBD",

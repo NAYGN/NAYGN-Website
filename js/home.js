@@ -73,7 +73,10 @@
     .then((r) => r.json())
     .then((data) => {
       const meeting = data.nextMeeting;
-      if (!meeting) return;
+      if (!meeting || meeting.hidden) {
+        root.style.display = 'none';
+        return;
+      }
 
       const titleEl = root.querySelector('[data-field="title"]');
       const locEl = root.querySelector('[data-field="location"]');

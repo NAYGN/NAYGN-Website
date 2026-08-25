@@ -15,7 +15,7 @@
   fetch('data/events.json')
     .then((r) => r.json())
     .then((data) => {
-      events = (data.upcoming || []).slice().sort((a, b) => {
+      events = (data.upcoming || []).filter((ev) => !ev.hidden).sort((a, b) => {
         const ad = new Date(a.date);
         const bd = new Date(b.date);
         const aBad = !isValidDate(ad);
