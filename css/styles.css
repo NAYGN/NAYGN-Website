@@ -1057,6 +1057,16 @@ hr.accent {
   white-space: nowrap;
 }
 .cal-link:hover { color: var(--uf-orange); }
+.rsvp-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--naygn-green);
+  white-space: nowrap;
+}
+.rsvp-link:hover { color: var(--uf-orange); }
 
 /* Chevron in actions column */
 .event-chevron {

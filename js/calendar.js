@@ -97,6 +97,7 @@
               </div>` : ''}
             </div>
             <div class="event-actions">
+              ${ev.rsvp ? `<a class="rsvp-link" href="${escapeHtml(ev.rsvp)}" target="_blank" rel="noopener">RSVP Now →</a>` : ''}
               ${isTbd ? '' : `<a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>`}
               ${hasDetails ? '<span class="event-chevron" aria-hidden="true"></span>' : ''}
             </div>
@@ -107,7 +108,7 @@
 
     list.querySelectorAll('.event-row.is-expandable').forEach((article) => {
       article.addEventListener('click', (e) => {
-        if (e.target.closest('.cal-link')) return;
+        if (e.target.closest('.cal-link') || e.target.closest('.rsvp-link')) return;
         const panel = article.querySelector('.event-panel');
         const isOpen = article.classList.contains('is-open');
         if (isOpen) {
