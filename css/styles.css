@@ -1059,14 +1059,25 @@ hr.accent {
 .cal-link:hover { color: var(--uf-orange); }
 .rsvp-link {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--naygn-green);
   white-space: nowrap;
+  color: #fff;
+  background: var(--naygn-green);
+  border: 1px solid var(--naygn-green);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  display: inline-block;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease);
 }
-.rsvp-link:hover { color: var(--uf-orange); }
+.rsvp-link:hover {
+  background: var(--uf-orange);
+  border-color: var(--uf-orange);
+  color: #fff;
+  transform: translateY(-1px);
+}
 
 /* Chevron in actions column */
 .event-chevron {
