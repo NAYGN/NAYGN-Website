@@ -8,39 +8,11 @@
   "upcoming": [
     {
       "title": "Hip Hop Cardio Class",
-      "date": "2026-09-15",
+      "date": "2026-09-29",
       "time": "8:00 PM – 9:00 PM",
       "location": "Southwest Rec Room 3, Southwest Recreation Center",
       "tag": "social",
       "description": "Come get moving with us at a Hip Hop cardio class — no experience or nuclear background required, just bring your energy! Sign up through the UF RecSports app."
-    },
-    {
-      "title": "Speaker Series Meeting 1: Constellation Energy",
-      "date": "2026-09-22",
-      "time": "5:30 PM – 6:30 PM",
-      "location": "Rhines Hall 125",
-      "tag": "general",
-      "rsvp": "https://forms.cloud.microsoft/r/GDsE3792R9",
-      "description": "Welcome back! Join us for officer introductions, a semester roadmap, and an overview of how to get involved — followed by a presentation from Constellation Energy on early-career life in clean energy. Food will be provided!",
-      "sections": [
-        {
-          "heading": "Theme: Early-Career Professionals",
-          "items": [
-            "Day-to-day life as a new engineer",
-            "What early-career roles look like in the clean energy fleet",
-            "How young professionals grow inside Constellation"
-          ]
-        },
-        {
-          "heading": "Opportunities Spotlight",
-          "items": [
-            "Internship and co-op programs",
-            "Hiring timeline",
-            "What makes a strong applicant",
-            "How UF students can stand out"
-          ]
-        }
-      ]
     },
     {
       "title": "Speaker Series Meeting 2: Duke Energy",
