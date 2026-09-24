@@ -98,7 +98,7 @@
             </div>
             <div class="event-actions">
               ${ev.rsvp ? `<a class="rsvp-link" href="${escapeHtml(ev.rsvp)}" target="_blank" rel="noopener">RSVP Now →</a>` : ''}
-              ${isTbd ? '' : `<a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>`}
+              ${isTbd || ev.endDate ? '' : `<a class="cal-link" href="${buildIcsHref(ev)}" download="${slugify(ev.title)}.ics">+ Add to calendar</a>`}
               ${hasDetails ? '<span class="event-chevron" aria-hidden="true"></span>' : ''}
             </div>
           </article>
@@ -129,7 +129,21 @@
     const datedEvents = events.filter((ev) => isValidDate(new Date(ev.date + 'T00:00:00')));
 
     const eventMap = {};
-    datedEvents.forEach((ev) => { eventMap[ev.date] = ev; });
+    datedEvents.forEach((ev) => {
+      eventMap[ev.date] = ev;
+      if (ev.endDate) {
+        const end = new Date(ev.endDate + 'T00:00:00');
+        if (isValidDate(end)) {
+          const cursor = new Date(ev.date + 'T00:00:00');
+          cursor.setDate(cursor.getDate() + 1);
+          while (cursor <= end) {
+            const key = `${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, '0')}-${String(cursor.getDate()).padStart(2, '0')}`;
+            if (!eventMap[key]) eventMap[key] = ev;
+            cursor.setDate(cursor.getDate() + 1);
+          }
+        }
+      }
+    });
 
     const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     const DAY_ABBR = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
