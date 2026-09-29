@@ -29,12 +29,20 @@
       "time": "All Week (Mon–Fri)",
       "location": "TBD",
       "tag": "outreach",
-      "description": "A week of chapter events celebrating nuclear science and technology, Monday through Friday. Daily activities are still being finalized — one confirmed event is our Postcard Push advocacy campaign.",
+      "description": "A week of chapter events celebrating nuclear science and technology, Monday through Friday. Daily activities are still being finalized — our Postcard Push advocacy campaign is confirmed for Monday.",
       "details": [
         "Monday, October 19 – Friday, October 23",
         "Daily events TBD, check back for updates",
-        "Includes our Postcard Push advocacy campaign"
+        "Postcard Push — Monday, October 19 at 5:30 PM in Rhines Hall 155"
       ]
+    },
+    {
+      "title": "Postcard Push",
+      "date": "2026-10-19",
+      "time": "5:30 PM",
+      "location": "Rhines Hall 155",
+      "tag": "outreach",
+      "description": "Write postcards to policymakers advocating for nuclear energy, as part of Nuclear Science Week. No experience necessary — we'll have talking points and supplies ready to go."
     },
     {
       "title": "Speaker Series Meeting 2: Duke Energy",
