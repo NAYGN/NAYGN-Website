@@ -82,21 +82,19 @@
       ]
     },
     {
-      "hidden": true,
       "title": "Speaker Series Meeting 3: Oak Ridge National Laboratory",
-      "date": "TBD",
-      "time": "TBD",
-      "location": "TBD",
-      "tag": "general",
-      "description": "A presentation from a researcher or engineer at Oak Ridge National Laboratory — one of the nation's premier nuclear research facilities — on the frontier of advanced reactor technology.",
+      "date": "2026-10-08",
+      "time": "1:55 PM",
+      "location": "Rhines Hall 125",
+      "tag": "industry",
+      "description": "A presentation from a researcher at Oak Ridge National Laboratory on the security of spent nuclear fuel and the nuclear fuel cycle. All are welcome to attend!",
       "sections": [
         {
-          "heading": "Theme: Advanced Reactors",
+          "heading": "Theme: Spent Fuel Security & the Nuclear Fuel Cycle",
           "items": [
-            "Microreactors",
-            "HALEU (High-Assay Low-Enriched Uranium)",
-            "Test reactors",
-            "National lab R&D"
+            "How spent nuclear fuel is stored and secured",
+            "An overview of the nuclear fuel cycle, from mining to disposal",
+            "Current research happening at Oak Ridge National Laboratory"
           ]
         },
         {
