@@ -1,7 +1,7 @@
 {
   "nextMeeting": {
-    "title": "Speaker Series Meeting 2: Oak Ridge National Laboratory",
-    "date": "2026-10-08T13:55:00-04:00",
+    "title": "Speaker Series Meeting 3: Duke Energy",
+    "date": "2026-11-16T17:00:00-05:00",
     "location": "Rhines Hall 125",
     "note": "New members welcome — no nuclear background required."
   },
@@ -82,6 +82,7 @@
       ]
     },
     {
+      "hidden": true,
       "title": "Speaker Series Meeting 2: Oak Ridge National Laboratory",
       "date": "2026-10-08",
       "time": "1:55 PM",
