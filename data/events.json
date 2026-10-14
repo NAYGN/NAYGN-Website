@@ -7,6 +7,15 @@
   },
   "upcoming": [
     {
+      "hidden": true,
+      "title": "Resume & LinkedIn Workshop",
+      "date": "TBD",
+      "time": "TBD",
+      "location": "TBD",
+      "tag": "general",
+      "description": "Hands-on sessions to sharpen your professional profile and make your resume stand out to employers."
+    },
+    {
       "title": "Hill Day Committee Meeting",
       "date": "2026-10-16",
       "time": "2:00 PM – 2:30 PM",
